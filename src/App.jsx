@@ -13,13 +13,6 @@ function Bio() {
 
 function App() {
   const [showBio, setShowBio] = useState(false);
-  // const bioButton = document.getElementById("bioButton");
-  //  const myParagraph = document.getElementById("bioParagraph");
-  // const profilePicture = document.getElementById("profilePic");
-
-  // bioButton.addEventListener("click", function() {
-  //   myParagraph.textContent = "The text has been changed!";
-  // });
   const [count, setCount] = useState(0);
   var music = new Audio("");
   const handleClick = () => {
@@ -31,7 +24,8 @@ function App() {
     <>
       <div className="app-container">
         <header className="header">
-          <h1>Gabby Hylton ♩</h1>
+          <img src='public/images/gabbyhylton.png'
+             alt='Chromakopia Name' />
           <h2>Home | Projects | Contact | <a href="https://www.linkedin.com/in/gabriella-hylton/">LinkedIn</a>
           </h2>
         </header>
