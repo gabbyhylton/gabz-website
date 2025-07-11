@@ -94,6 +94,7 @@ img {
   width: 50px;
   background-color: #1a1a1a;
   border-radius: 50%;
+  animation: fade-in-out 2s linear infinite;
 }
 
 .circle-2 {
@@ -102,6 +103,7 @@ img {
   background-color: #00843d;
   border-radius: 50%;
   border: 2px solid black;
+  animation: fade-in-out 3s linear infinite;
 }
 
 .circle-section {
@@ -142,6 +144,19 @@ img {
   border-color: #1a1a1a;
 
 }
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
