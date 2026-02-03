@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Spotify } from "react-spotify-embed";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import logo from 'public/images/gabbyhylton.png';
-import picture from 'public/images/IMG_2941.JPG';
+import logo from './assets/gabbyhylton.png';
+import picture from './assets/IMG_2941.JPG';
 import './App.css'
 
 function Bio() {
