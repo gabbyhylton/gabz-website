@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Spotify } from "react-spotify-embed";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import logo from 'public/images/gabbyhylton.png';
+import picture from 'public/images/IMG_2941.JPG';
 import './App.css'
 
 function Bio() {
@@ -24,7 +26,7 @@ function App() {
     <>
       <div className="app-container">
         <header className="header">
-          <img src='public/images/gabbyhylton.png'
+          <img src={logo}
              alt='Chromakopia Name' />
           <h2>Home | Projects | Contact | <a href="https://www.linkedin.com/in/gabriella-hylton/" target='_blank'>LinkedIn</a>
           </h2>
@@ -40,7 +42,7 @@ function App() {
                 My goal this summer is to complete my personal website!
                 </p>
             ) : (
-              <img src="src/IMG_2941.JPG" 
+              <img src={picture} 
                    alt="Profile Picture" 
                    style={{ width: "500px", height: "500px", objectFit: "cover" }} />
             )}
