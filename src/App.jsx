@@ -26,7 +26,7 @@ function App() {
         <header className="header">
           <img src='public/images/gabbyhylton.png'
              alt='Chromakopia Name' />
-          <h2>Home | Projects | Contact | <a href="https://www.linkedin.com/in/gabriella-hylton/">LinkedIn</a>
+          <h2>Home | Projects | Contact | <a href="https://www.linkedin.com/in/gabriella-hylton/" target='_blank'>LinkedIn</a>
           </h2>
         </header>
 
