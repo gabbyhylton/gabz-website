@@ -145,6 +145,48 @@ img {
 
 }
 
+.project-card {
+  width: 500px;
+  height: 500px;
+  position: relative;
+
+  border: 6px solid #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-image,
+.plannerdesc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  object-fit: cover;
+}
+
+.plannerdesc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-image.hidden {
+  opacity: 0;
+}
+
+.plannerdesc.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @keyframes fade-in-out {
   0% {
     opacity: 0;
