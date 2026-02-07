@@ -12,10 +12,14 @@ export default function Home() {
         <div className="profile-section">
           {showBio ? (
             <p className="bio-paragraph">
-              My name is Gabriella Hylton and I am currently a third-year Computer Science and Economics Student at Northeastern University.
-              For summer 2025, I am working as a Client Delivery Associate for the Cervantes Group at their Boston location.
-              Additionally, I am taking a technical prep workshop as well to increase my current understanding of computer science curriculum.
-              My goal this summer is to complete my personal website!
+              My name is Gabriella Hylton and I am currently a fourth-year Computer Science and Economics Student at Northeastern University.
+              For summer 2025, I worked as a Client Delivery Associate for the Cervantes Group at their Boston location. I then went to study
+              abroad in Madrid, Spain in the fall semester. Now, I'm back in Boston Spring 2026 and currently doing my second co-op 
+              as a Power and Renewables Research Co-op at Wood Mackenzie!
+              In my free time, I've been fixing up my old projects while also building new ones and refining my technical skills. This website is 
+              inspired by Tyler, the Creator, one of my favorite music artists. Additionally, I box with my friend at Title Boxing, and I'm hoping 
+              to get back in yoga this summer!
+              Thank you for stopping by my personal website!
             </p>
           ) : (
             <img

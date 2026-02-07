@@ -145,7 +145,9 @@ img {
 
 }
 
-.project-card {
+.project-card,
+.project-1,
+.project-2 {
   width: 500px;
   height: 500px;
   position: relative;
@@ -153,10 +155,12 @@ img {
   border: 6px solid #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
+  margin: 15px;
 }
 
 .project-image,
-.plannerdesc {
+.plannerdesc,
+.girlmathdesc {
   position: absolute;
   top: 0;
   left: 0;
@@ -164,11 +168,13 @@ img {
   height: 100%;
 }
 
-.project-image {
+.project-image,
+.girlmath {
   object-fit: cover;
 }
 
-.plannerdesc {
+.plannerdesc,
+.girlmathdesc {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,11 +184,13 @@ img {
   transition: opacity 0.3s ease;
 }
 
-.project-image.hidden {
+.project-image.hidden,
+.girlmath.hidden {
   opacity: 0;
 }
 
-.plannerdesc.visible {
+.plannerdesc.visible,
+.girlmathdesc.visible {
   opacity: 1;
   pointer-events: auto;
 }
