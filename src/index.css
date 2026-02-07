@@ -240,7 +240,52 @@ img {
   animation-duration: 6s;
 }
 
-@keyframes lightning-fall {
+body.callmeifyougetlost,
+body.callmeifyougetlost .header,
+body.callmeifyougetlost.project-card,
+body.callmeifyougetlost.page {
+  background-color: #f5eacb;
+}
+
+body.chromakopia,
+body.chromakopia .header,
+body.chromakopia.project-card {
+  background-color: #00843d;
+}
+
+/* body.callmeifyougetlost.header {
+  background-color: #f5eacb;
+} */
+
+img {
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sky-effects {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.sky-item {
+  position: absolute;
+  top: -10%;
+  opacity: 0;
+  animation-name: fall, twinkle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
   0% {
     transform: translateY(0);
     opacity: 0;
@@ -251,6 +296,12 @@ img {
   100% {
     transform: translateY(110vh);
     opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.3;
   }
 }
 

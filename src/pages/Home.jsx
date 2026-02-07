@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import logo from '../assets/gabbyhylton.png';
 import picture from '../assets/IMG_2941.JPG';
+import picture2 from '../assets/gabby_pic2.JPG';
 import '../App.css'
 
-export default function Home() {
+export default function Home( { theme }) {
     const [showBio, setShowBio] = useState(false);
 
     return (
@@ -23,7 +24,7 @@ export default function Home() {
             </p>
           ) : (
             <img
-              src={picture}
+              src={theme === "callmeifyougetlost" ? picture2 : picture}
               alt="Profile"
               style={{ width: "500px", height: "500px", objectFit: "cover" }}
             />
@@ -36,13 +37,40 @@ export default function Home() {
             {showBio ? "Show Picture" : "Show Bio"}
           </button>
         </div>
-        <div className="lightning-container">
+        {/* <div className="lightning-container">
+          {Array.from({ length: 15}).map((_, i) => {
+            const chromakopia = theme === "chromakopia";
+            const symbol = chromakopia ? "⚡" : "⭐";
+
+            const color = chromakopia
+            ? "#facc15"
+            : ["ef4444", "#22c55e", "#3b82f6", "#a855f7"] [
+                Math.floor(Math.random() * 4)
+            ];
+
+            return (
+              <span key={i}
+              className="sky-item"
+              style={{
+                left: `${Math.random() * 100}%`,
+                color,
+                fontSize: `${Math.random() * 20 + 10}px`,
+                animationDuration: `${Math.random() * 3 + 2}s`,
+              }}
+              >
+              {symbol}
+              </span>
+            );
+          })}
+          </div>
+
+
           {Array.from({ length: 15 }).map((_, i) => (
             <span key={i} className='lightning' style={{ left: `${Math.random() * 100}%` }}>
               ⚡
             </span>
           ))}
-        </div>
+        </div> */}
       </main>
     </div>
   )
