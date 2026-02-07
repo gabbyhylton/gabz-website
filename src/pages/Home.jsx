@@ -36,6 +36,13 @@ export default function Home() {
             {showBio ? "Show Picture" : "Show Bio"}
           </button>
         </div>
+        <div className="lightning-container">
+          {Array.from({ length: 15 }).map((_, i) => (
+            <span key={i} className='lightning' style={{ left: `${Math.random() * 100}%` }}>
+              ⚡
+            </span>
+          ))}
+        </div>
       </main>
     </div>
   )

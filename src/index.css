@@ -44,6 +44,10 @@ h1 {
   line-height: 1.1;
 }
 
+.page {
+  padding-top: 80px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -145,6 +149,18 @@ img {
 
 }
 
+.header {
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: #00843d;
+  z-index: 1000;
+}
+
 .project-card,
 .project-1,
 .project-2 {
@@ -193,6 +209,49 @@ img {
 .girlmathdesc.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.lightning-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.lightning {
+  position: absolute;
+  top: -10%;
+  font-size: 24px;
+  opacity: 0;
+  animation: lightning-fall linear infinite;
+}
+
+/* Lightning fall speed */
+.lightning:nth-child(odd) {
+  animation-duration: 3s;
+}
+
+.lightning:nth-child(even) {
+  animation-duration: 4.5s;
+}
+
+.lightning:nth-child(3n) {
+  animation-duration: 6s;
+}
+
+@keyframes lightning-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
 }
 
 @keyframes fade-in-out {

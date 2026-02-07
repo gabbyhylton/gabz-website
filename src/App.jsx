@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
+    
     <Router>
       <header className="header">
         <img src={logo} alt="Logo" />
@@ -29,11 +30,13 @@ function App() {
         </h2>
       </header>
 
+      <main className='page'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </main>
     </Router>
 
   );
