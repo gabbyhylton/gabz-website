@@ -241,9 +241,10 @@ img {
 }
 
 body.callmeifyougetlost,
-body.callmeifyougetlost .header,
 body.callmeifyougetlost.project-card,
-body.callmeifyougetlost.page {
+body.callmeifyougetlost .header,
+body.callmeifyougetlost.page,
+.button-2.callmeifyougetlost {
   background-color: #f5eacb;
 }
 
@@ -257,15 +258,43 @@ body.chromakopia.project-card {
   background-color: #f5eacb;
 } */
 
-img {
+/* img {
   transition: opacity 0.3s ease;
+} */
+
+.images {
+  transition: opacity 0.3s ease;
+  width: 500px;
+  height: 500px;
+  position: relative;
+
+  border: 6px solid #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .theme-toggle {
-  border: none;
   background: transparent;
-  font-size: 1.2rem;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 8px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
   cursor: pointer;
+  /* font-size: 1.2rem; */
+  /* cursor: pointer; */
 }
 
 .sky-effects {

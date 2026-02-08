@@ -23,7 +23,7 @@ export default function Home( { theme }) {
               Thank you for stopping by my personal website!
             </p>
           ) : (
-            <img
+            <img className='images'
               src={theme === "callmeifyougetlost" ? picture2 : picture}
               alt="Profile"
               style={{ width: "500px", height: "500px", objectFit: "cover" }}
@@ -32,45 +32,11 @@ export default function Home( { theme }) {
 
           <button
             onClick={() => setShowBio(!showBio)}
-            className="button-2"
+            className={`button-2 ${theme === "callmeifyougetlost" ? "callmeifyougetlost" : "chromakopia"}`}
           >
             {showBio ? "Show Picture" : "Show Bio"}
           </button>
         </div>
-        {/* <div className="lightning-container">
-          {Array.from({ length: 15}).map((_, i) => {
-            const chromakopia = theme === "chromakopia";
-            const symbol = chromakopia ? "⚡" : "⭐";
-
-            const color = chromakopia
-            ? "#facc15"
-            : ["ef4444", "#22c55e", "#3b82f6", "#a855f7"] [
-                Math.floor(Math.random() * 4)
-            ];
-
-            return (
-              <span key={i}
-              className="sky-item"
-              style={{
-                left: `${Math.random() * 100}%`,
-                color,
-                fontSize: `${Math.random() * 20 + 10}px`,
-                animationDuration: `${Math.random() * 3 + 2}s`,
-              }}
-              >
-              {symbol}
-              </span>
-            );
-          })}
-          </div>
-
-
-          {Array.from({ length: 15 }).map((_, i) => (
-            <span key={i} className='lightning' style={{ left: `${Math.random() * 100}%` }}>
-              ⚡
-            </span>
-          ))}
-        </div> */}
       </main>
     </div>
   )

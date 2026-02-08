@@ -55,7 +55,7 @@ function App() {
     
     <Router>
       <header className="header">
-        <img src={theme === "callmeifyougetlost" ? logo2 : logo} alt="Logo" />
+        <img className="logo" src={theme === "callmeifyougetlost" ? logo2 : logo} alt="Logo" />
 
         <h2>
           <Link to="/">Home</Link> | {" "}
@@ -67,10 +67,14 @@ function App() {
             >
               LinkedIn
             </a>
-        </h2>
-        <button className="theme-toggle" onClick={() => setTheme(theme === "callmeifyougetlost" ? "chromakopia" : "callmeifyougetlost")}>
-          {theme === "callmeifyougetlost" ? "Switch to Chromakopia Theme" : "Switch to Call Me If You Get Lost Theme"}
+          {" "} | {" "} 
+          <button className="theme-toggle" onClick={() => setTheme(theme === "callmeifyougetlost" ? "chromakopia" : "callmeifyougetlost")}>
+          {theme === "callmeifyougetlost" ? "Chromakopia" : "CMIYGL"}
         </button>
+        </h2>
+        {/* <button className="theme-toggle" onClick={() => setTheme(theme === "callmeifyougetlost" ? "chromakopia" : "callmeifyougetlost")}>
+          {theme === "callmeifyougetlost" ? "Chromakopia" : "CMIYGL"}
+        </button> */}
       </header>
 
       <main className='page'>
@@ -86,67 +90,3 @@ function App() {
   );
 }
 export default App;
-
-// function Bio() {
-//   return <p class="border-paragraph">My name is Gabriella Hylton and I am currently a third-year Computer Science and Economics Student at Northeastern University.
-//     For summer 2025, I am working as a Client Delivery Associate for the Cervantes Group at their Boston location.
-//     Additionally, I am taking a technical prep workshop as well to increase my current understanding of computer science curriculum while also furthering my knowledge.
-//     My goal this summer is to complete my personal website!</p>
-// }
-
-// function App() {
-//   const [showBio, setShowBio] = useState(false);
-//   const [count, setCount] = useState(0);
-//   var music = new Audio("");
-//   const handleClick = () => {
-//     music.play();
-//     //music.currentTime=0;
-//   };
-
-//   return (
-//     <>
-//       <div className="app-container">
-//         <header className="header">
-//           <img src={logo}
-//              alt='Chromakopia Name' />
-//           <h2>Home | Projects | Contact | <a href="https://www.linkedin.com/in/gabriella-hylton/" target='_blank'>LinkedIn</a>
-//           </h2>
-//         </header>
-
-//         <main className="main-content">
-//           <div className="profile-section">
-//             {showBio ? (
-//               <p className="bio-paragraph">
-//                 My name is Gabriella Hylton and I am currently a third-year Computer Science and Economics Student at Northeastern University.
-//                 For summer 2025, I am working as a Client Delivery Associate for the Cervantes Group at their Boston location.
-//                 Additionally, I am taking a technical prep workshop as well to increase my current understanding of computer science curriculum while also furthering my knowledge.
-//                 My goal this summer is to complete my personal website!
-//                 </p>
-//             ) : (
-//               <img src={picture} 
-//                    alt="Profile Picture" 
-//                    style={{ width: "500px", height: "500px", objectFit: "cover" }} />
-//             )}
-//             <button onClick={() => setShowBio(!showBio)} className="button-2">
-//               {showBio ? "Show Picture" : "Show Bio"}
-//               </button>
-//           </div>
-
-//           <div className="circle-section">
-//             <div class="circle-1"></div>
-//           <div class="circle-2"></div>
-//           <div class="circle-1"></div>
-//           <div class="circle-2"></div>
-//           <div class="circle-1"></div>
-//           <div class="circle-2"></div>
-//           </div>
-//         </main>
-
-//       </div>
-//       {/* <button class="button-1">♩</button> */}
-//         {/* <p class="border-paragraph">A solid border</p> */}
-//     </>
-//   )
-// }
-
-// export default App;
